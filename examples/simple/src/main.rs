@@ -320,3 +320,11 @@ fn test_issue_68() {
         "Hello!\n\nThe 0 number.\n\nThe 1 number.\n\nThe 2 number.\n\nGood bye!\n",
     );
 }
+
+#[test]
+fn test_list_join() {
+    assert_eq!(
+        r2s(|o| list_joins(o, &[2, 3, 7])),
+        "<p>Items: 2, 3, 7.</p>\n",
+    )
+}
